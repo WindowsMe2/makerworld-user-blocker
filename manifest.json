@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "MakerWorld User Blocker",
+  "version": "1.0",
+  "description": "Block content from specific users on makerworld.com",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["*://*.makerworld.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.makerworld.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
